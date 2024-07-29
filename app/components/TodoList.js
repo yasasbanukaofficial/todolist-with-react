@@ -27,9 +27,10 @@ const TodoList = () => {
             <div className='todolist'>
                 <h1>2Do-List</h1>
                 <div className='todolistInput-container'>
-                    <input type="text" onChange={handleTaskChange} value={newTask} className='taskInput' placeholder='Enter Your Task'></input>
+                    <input className="inputTask" type="text" onChange={handleTaskChange} value={newTask} placeholder='Enter Your Task'></input>
                     <button onClick={addTask} className='addBtn'>Add Task</button>
                 </div>
+                <p className='error'></p>
                 <div className='task-display'>
                     <ol>
                         {task.map((task, index) =>
